@@ -1,16 +1,17 @@
-from app import app 
+from app import app
+
 from flask import render_template
 
 @app.route("/")
-def greeting():
+def index():
     return render_template("index.html")
 
-@app.route("/")
-def extract(): 
+@app.route("/extract")
+def extract():
     return render_template("extract.html")
 
 @app.route("/products")
-def products(): 
+def products():
     return render_template("products.html")
 
 @app.route("/product/<product_id>")
@@ -20,3 +21,4 @@ def product(product_id):
 @app.route("/about")
 def about():
     return render_template("about.html")
+    
